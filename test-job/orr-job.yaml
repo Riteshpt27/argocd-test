@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: replay-job
+spec:
+  ttlSecondsAfterFinished: 5
+  template:
+    spec:
+      containers:
+      - name: replay-job
+        image: riteshpt27/replay-job:v1
+        stdin: true
+        tty: true
+      restartPolicy: Never
+  backoffLimit: 2
