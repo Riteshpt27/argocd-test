@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: replay-job
-        image: riteshpt27/replay-job:v1
+        image: riteshpt27/replay-job:v2
         stdin: true
         tty: true
       restartPolicy: Never
